@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Flag Project</title>
+    <style>
+      /* Write your CSS Code here */
+      style {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: white;
+      }
+
+      /* Flag container */
+      .flag {
+        width: 900px;
+        height: 600px;
+        background-color: #ce1126; /* Màu đỏ */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      /* Blue stripe in the middle */
+      .flag > *:nth-child(2) {
+        background-color: #002868;
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* White circle in the middle */
+      .flag > *:nth-child(2) > * {
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Styling text "The Flag" */
+      .flag > *:first-child {
+        color: white;
+        font-size: 48px;
+        font-weight: bold;
+        position: absolute;
+        top: 30px;
+      }
+
+      /* Styling text "of Laos" inside the circle */
+      .flag > *:nth-child(2) > * > * {
+        font-size: 36px;
+        color: black;
+        text-align: center;
+        line-height: 1.2;
+      }
+    </style>
+  </head>
+
+  <!-- 
+  IMPORTANT! Do not change any HTML
+Don't add any classes/ids/elements 
+Use what you know about combining selectors 
+and CSS specificity instead.
+Hint 1: The flag is 900px by 600px and the circle is 200px by 200px.
+Hint 2: You can use CSS inspection to get the colors from
+-->
+
+  <body>
+    <div class="flag">
+      <p>The Flag</p>
+      <div>
+        <div>
+          <p>of Laos</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
